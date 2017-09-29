@@ -1,0 +1,33 @@
+{
+  "name": "kortex-example-counter",
+  "version": "1.0.0",
+  "description": "An example of using kortex to create a simple counter",
+  "main": "app.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronelliott/kortex-example-counter.git"
+  },
+  "keywords": [
+    "kortex",
+    "react",
+    "state-management",
+    "kortex-example"
+  ],
+  "author": "Ron Elliott <ronaldbelliott@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronelliott/kortex-example-counter/issues"
+  },
+  "homepage": "https://github.com/ronelliott/kortex-example-counter#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "kortex": "^0.0.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^3.6.0"
+  }
+}
