@@ -1,15 +1,12 @@
-import { connect } from "kortex";
+import { connect } from './state';
 
-import {
-	Controls,
-	Counter,
-} from "./components";
+import { Controls, Counter } from './components';
 
-export const ControlsContainer = connect({
-	decrement: "actions.counter.decrement",
-	increment: "actions.counter.increment",
-}, Controls);
+export const ControlsContainer = connect(Controls, {
+	decrement: 'actions.decrement',
+	increment: 'actions.increment',
+});
 
-export const CounterContainer = connect({
-	value: "state.counter.value",
-}, Counter);
+export const CounterContainer = connect(Counter, {
+	value: 'state.value',
+});

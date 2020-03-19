@@ -1,20 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { modules } from "kortex";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import {
-	ControlsContainer,
-	CounterContainer,
-} from "./containers";
-import state from "./state";
-
-modules([
-	[ "counter", state ],
-])
+import './state';
+import { ControlsContainer, CounterContainer } from './containers';
 
 ReactDOM.render(
 	<div>
 		<ControlsContainer />
 		<CounterContainer />
 	</div>,
-document.getElementById("app-container"));
+document.getElementById('app-container'));

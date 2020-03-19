@@ -1,25 +1,29 @@
 const path = require('path');
 
 module.exports = {
-	entry: path.join(__dirname, "src", "js", "main.js"),
-	output: {
-		path: __dirname,
-		filename: "app.js",
+	mode: 'development',
+	entry: path.join(__dirname, 'src', 'js', 'main.js'),
+	module: {
+		rules: [
+			{
+				test: /\.js?$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [
+							'@babel/preset-react',
+						],
+					},
+				},
+			},
+		],
 	},
 	resolve: {
-		extensions: [ ".js" ],
+		extensions: ['.js'],
 	},
-	module: {
-		loaders: [{
-			test: /\.(js)$/,
-			loader: "babel-loader",
-			query: {
-				presets: [
-					"es2015",
-					"react",
-					"stage-2",
-				],
-			},
-		}],
+	output: {
+		filename: 'app.js',
+		path: __dirname,
 	},
 };
